@@ -65,12 +65,12 @@
 
 /* advatages */
 
-.advatages-icon__background {
+.icon-background {
 background-color: #68B738;
 width: 80px;
 height: 80px;
 }
-.advantages-icon {
+.icon {
 display: flex;
 justify-content: center;
 }
