@@ -1,0 +1,143 @@
+.card-add {
+  width: 100%;
+}
+
+.card-add__weight {
+  word-break: break-all;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 14px;
+  line-height: 14px;
+}
+
+.card-add__title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 13px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: $color-dark-grey-2;
+  text-transform: uppercase;
+}
+
+.card-add__price {
+  word-break: break-all;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 14px;
+  line-height: 100%;
+  text-align: right;
+  color: $color-dark-grey;
+}
+
+.card-add__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-add__button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-add__button {
+  min-width: 282px;
+  word-break: break-all;
+}
+
+@media (min-width: $tablet-width) {
+  .card-add {
+    width: 100%;
+  }
+
+  .card-add__title {
+    padding: 0;
+    font-size: 20px;
+    line-height: 100%;
+    color: $color-dark-grey-2;
+  }
+
+  .card-add__container {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+
+  .card-add__wrapper {
+    padding-top: 2px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .card-add__list {
+    margin-bottom: 67px;
+  }
+
+  .card-add__weight {
+    text-align: right;
+    font-size: 16px;
+    line-height: 125%;
+    padding-bottom: 22px;
+  }
+
+  .card-add__price {
+    font-size: 16px;
+    line-height: 125%;
+    min-width: 92px;
+    padding-bottom: 22px;
+  }
+
+  .card-add__button-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card-add {
+    width: 100%;
+  }
+
+  .card-add__title {
+    padding: 0;
+  }
+
+  .card-add__container {
+    padding: 0;
+    min-width: 244px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .card-add__wrapper {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .card-add__weight {
+    padding: 0;
+  }
+
+  .card-add__price {
+    text-align: left;
+    min-width: 82px;
+    padding: 0;
+  }
+
+  .card-add__button-wrapper {
+    margin-bottom: 0;
+  }
+
+  .card-add__button {
+    min-width: 244px;
+    padding: 10px 91px;
+  }
+}
