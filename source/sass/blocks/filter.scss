@@ -1,0 +1,679 @@
+.filter__border {
+  border-bottom: 1px solid $color-border-grey;
+}
+
+.filter__about {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+
+  border: none;
+}
+
+.filter__about-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 13px;
+}
+
+.filter__about-label {
+  max-width: 50%;
+  margin: 0;
+  margin-right: 15px;
+  padding: 0;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.filter__about-field {
+  width: 100%;
+  padding: 14px 15px;
+
+  border: 1px solid $color-border-form;
+
+  appearance: none;
+}
+
+.filter__about-field::placeholder {
+  margin: 0 20px;
+
+  font-size: 16px;
+  line-height: 112%;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $color-dark-grey;
+  text-transform: uppercase;
+}
+
+.filter__radio {
+  padding-top: 24px;
+  padding-bottom: 5px;
+
+  border: none;
+}
+
+.filter__radio-label {
+  margin: 0;
+  padding: 0;
+  padding-left: 45px;
+
+  text-transform: uppercase;
+}
+
+.filter__radio-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filter__radio-item {
+  padding-bottom: 13px;
+}
+
+.filter__contacts {
+  width: 100%;
+  margin: 0;
+  margin-top: 26px;
+  padding: 0 0 12px;
+
+  border: none;
+}
+
+.filter__decoration {
+  position: relative;
+}
+
+.filter__decoration::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: $color-basic-green;
+}
+
+.filter__decoration--contacts::before {
+  top: 30%;
+}
+
+.filter__decoration-container {
+  display: flex;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.filter__contacts-subtitle {
+  display: inline-block;
+  margin: 0;
+  padding: 0 20px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 108%;
+  color: $color-black;
+
+  background-color: $color-white;
+}
+
+.filter__contacts-container {
+  margin-top: 34px;
+}
+
+.filter__contacts-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 11px;
+}
+
+.filter__contacts-label {
+  max-width: 50%;
+  margin: 0;
+  padding: 0;
+  padding-right: 11px;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.filter__contacts-field {
+  position: relative;
+
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  padding-right: 40px;
+
+  border: 1px solid $color-border-form;
+
+  appearance: none;
+}
+
+.filter__contacts-field::placeholder {
+  font-size: 16px;
+  line-height: 112%;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $color-dark-grey;
+  text-transform: uppercase;
+}
+
+.filter__contacts-icon {
+  position: absolute;
+  right: 35px;
+}
+
+.filter__comment {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 24px;
+
+  border: none;
+}
+
+.filter__comment-subtitle {
+  display: inline-block;
+  margin: 0;
+  padding: 0 23px 0 20px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 108%;
+  color: $color-black;
+
+  background-color: $color-white;
+}
+
+.filter__comment-label {
+  margin: 0;
+  padding: 0;
+}
+
+.filter__comment-field {
+  width: 100%;
+  min-height: 150px;
+  margin: 0;
+  margin-top: 37px;
+  padding: 8px 10px;
+
+  border: 1px solid $color-border-form;
+
+  appearance: none;
+}
+
+.filter__comment-field::placeholder {
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 112%;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-align: center;
+  color: $color-dark-grey;
+  text-transform: uppercase;
+}
+
+.filter__checkbox {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 19px;
+
+  border: none;
+}
+
+.filter__checkbox-subtitle {
+  display: inline-block;
+  margin: 0;
+  padding: 0 23px 0 20px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 108%;
+  color: $color-black;
+
+  background-color: $color-white;
+}
+
+.filter__checkbox-list {
+  margin-top: 32px;
+
+  list-style: none;
+}
+
+.filter__checkbox-item {
+  padding-bottom: 13px;
+}
+
+.filter__checkbox-label {
+  margin: 0;
+  padding: 0;
+  padding-left: 45px;
+
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter__checkbox-field {
+  margin: 0;
+  padding: 0;
+}
+
+.filter__button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__button {
+  margin-bottom: 8px;
+  padding: 10px 44px;
+}
+
+@media (min-width: $tablet-width) {
+  .filter__about {
+    width: 100%;
+    margin-bottom: 52px;
+    padding: 0 37px 0 30px;
+  }
+
+  .filter__about-wrapper {
+    margin-bottom: 19px;
+    padding: 0 30px 0 40px;
+  }
+
+  .filter__about-label {
+    margin-right: 18px;
+
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .filter__about-field {
+    padding: 11px 10px 10px 18px;
+
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .filter__about-field:hover {
+    border: 1px solid $color-special-grey;
+  }
+
+  .filter__about-field:focus {
+    border: 1px solid $color-dark-grey;
+  }
+
+  .filter__about-field--error {
+    border: 2px solid $color-error;
+  }
+
+  .filter__about-field::placeholder {
+    padding: 10px 0;
+
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .filter__border {
+    border: none;
+  }
+
+  .filter__radio {
+    width: 100%;
+    margin-bottom: 74px;
+    padding: 0 37px 0 41px;
+  }
+
+  .filter__radio-list {
+    margin: 0 30px;
+    padding: 25px;
+    padding-bottom: 10px;
+
+    border: 1px solid $color-border-form;
+  }
+
+  .filter__radio-item {
+    margin-bottom: 13px;
+    padding: 5px 0;
+  }
+
+  .filter__radio-label {
+    padding-left: 62px;
+
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .filter__contacts {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 46px;
+    padding-bottom: 0;
+  }
+
+  .filter__decoration-container {
+    margin: 0 30px;
+  }
+
+  .filter__decoration--contacts::before {
+    top: 50%;
+  }
+
+  .filter__contacts-subtitle {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 10px;
+    padding: 0 39px;
+
+    font-size: 36px;
+    line-height: 100%;
+  }
+
+  .filter__contacts-container {
+    margin-top: 66px;
+  }
+
+  .filter__contacts-wrapper {
+    margin-bottom: 20px;
+    padding: 0 35px 0 39px;
+  }
+
+  .filter__contacts-label {
+    padding: 0 18px 0 0;
+
+    font-size: 20px;
+    line-height: 100%;
+  }
+
+  .filter__contacts-label--email {
+    padding-right: 20px;
+  }
+
+  .filter__contacts-label--phone {
+    padding-right: 15px;
+  }
+
+  .filter__contacts-field {
+    padding: 10px 21px;
+    padding-right: 60px;
+
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .filter__contacts-field:hover {
+    border: 1px solid $color-special-grey;
+  }
+
+  .filter__contacts-field:focus {
+    border: 1px solid $color-dark-grey;
+  }
+
+  .filter__contacts-field--error {
+    border: 2px solid $color-error;
+  }
+
+  .filter__contacts-icon {
+    position: absolute;
+    right: 84px;
+  }
+
+  .filter__contacts-wrapper:focus-within * {
+    stroke: $color-basic-green;
+  }
+
+  .filter__contacts-wrapper--error * {
+    stroke: $color-error;
+  }
+
+  .filter__contacts-field::placeholder {
+    font-size: 20px;
+    line-height: 100%;
+  }
+
+  .filter__comment {
+    width: 100%;
+    margin-bottom: 62px;
+    padding: 0;
+  }
+
+  .filter__comment-subtitle {
+    margin-bottom: 8px;
+    padding: 0 40px;
+
+    font-size: 36px;
+    line-height: 100%;
+  }
+
+  .filter__comment .container {
+    padding: 0 68px 0 70px;
+  }
+
+  .filter__comment-field {
+    min-height: 174px;
+    margin-top: 68px;
+    padding: 10px 19px;
+  }
+
+  .filter__comment-field::placeholder {
+    padding: 0;
+
+    font-size: 20px;
+    line-height: 150%;
+    text-align: left;
+  }
+
+  .filter__checkbox {
+    width: 100%;
+    padding: 0;
+  }
+
+  .filter__checkbox-subtitle {
+    margin-bottom: 8px;
+    padding: 0 40px;
+
+    font-size: 36px;
+    line-height: 100%;
+  }
+
+  .filter__checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 49px;
+    margin-bottom: 24px;
+    padding: 0 11px 0 70px;
+  }
+
+  .filter__checkbox-item {
+    width: 50%;
+    margin-bottom: 34px;
+    padding: 0;
+  }
+
+  .filter__checkbox-label {
+    padding-top: 7px;
+    padding-left: 59px;
+
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .filter__button-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .filter__button {
+    margin-right: 61px;
+    margin-bottom: 0;
+    margin-left: 40px;
+    padding: 16px 65px;
+
+    font-size: 20px;
+    line-height: 100%;
+  }
+
+  .form__meta {
+    display: inline-block;
+
+    font-size: 16px;
+    line-height: 100%;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter__flex-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: $desktop-width;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 0 110px;
+
+    column-gap: 80px;
+  }
+
+  .filter__border {
+    display: none;
+  }
+
+  .filter__about {
+    grid-column: 1 / 2;
+    min-width: calc(50% - 110px);
+    margin: 0;
+    padding: 0;
+  }
+
+  .filter__about-wrapper {
+    padding: 0;
+  }
+
+  .filter__about-field {
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .filter__radio {
+    grid-column: 2 / 3;
+    min-width: calc(50% - 110px);
+    margin: 0;
+    padding: 0;
+  }
+
+  .filter__radio-list {
+    margin: 0;
+  }
+
+  .filter__decoration-container {
+    max-width: $desktop-width;
+    margin: 0 auto;
+    padding: 0 110px;
+  }
+
+  .filter__contacts {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 48px;
+  }
+
+  .filter__contacts-container {
+    display: flex;
+    max-width: $desktop-width;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .filter__contacts-wrapper {
+    width: 50%;
+    padding: 0;
+  }
+
+  .filter__contacts-wrapper:not(:last-child) {
+    margin-right: 78px;
+  }
+
+  .filter__contacts-subtitle {
+    margin-left: -40px;
+    padding: 0 40px;
+  }
+
+  .filter__contacts-field {
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .filter__contacts-email {
+    position: relative;
+  }
+
+  .filter__contacts-icon {
+    position: absolute;
+    right: 22px;
+  }
+
+  .filter__contacts-tel {
+    position: relative;
+  }
+
+  .filter__comment {
+    width: 100%;
+    margin-bottom: 64px;
+    padding: 0;
+  }
+
+  .filter__comment-subtitle {
+    margin-left: -40px;
+    padding: 0 40px;
+  }
+
+  .filter__comment .container {
+    max-width: $desktop-width;
+    margin: 0 auto;
+    padding: 0 110px;
+  }
+
+  .filter__checkbox {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .filter__checkbox-subtitle {
+    margin-left: -40px;
+  }
+
+  .filter__checkbox-list {
+    max-width: $desktop-width;
+    margin-right: auto;
+    margin-bottom: 31px;
+    margin-left: auto;
+    padding: 0 110px;
+  }
+
+  .filter__checkbox-item {
+    width: calc((100% - 336px) / 4);
+    margin-right: 104px;
+  }
+
+  .filter__checkbox-item:last-child {
+    margin-right: 24px;
+  }
+
+  .filter__button-wrapper {
+    max-width: $desktop-width;
+    margin: 0 auto;
+  }
+
+  .filter__button {
+    margin-right: 81px;
+    margin-left: 0;
+    padding: 16px 208px;
+  }
+}

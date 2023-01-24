@@ -1,0 +1,147 @@
+//
+.catalog-add {
+  padding: 23px 0 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 63px 0 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 71px 0 19px;
+  }
+}
+
+.catalog-add__title {
+  position: relative;
+
+  margin: 0 -20px;
+  overflow: hidden;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: $font-family-main;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 -30px;
+    padding-left: 30px;
+
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 -102px 0 -110px;
+    padding-left: 70px;
+  }
+}
+
+.catalog-add__title span {
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 37px;
+  }
+}
+
+.catalog-add__title--lines {
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+
+    vertical-align: middle;
+
+    background-color: #68b738;
+
+    @media (min-width: $tablet-width) {
+      top: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 28px;
+    }
+  }
+
+  &::before {
+    display: none;
+    margin-left: -100%;
+
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+    }
+  }
+
+  &::after {
+    margin-right: -100%;
+  }
+}
+
+.catalog-add__container {
+  padding-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px 80px;
+    align-items: start;
+    padding-top: 76px;
+  }
+}
+
+.catalog-add__list {
+  margin: 0 0 34px;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 68px;
+  }
+}
+
+.catalog-add__bonus {
+  padding: 172px 20px 26px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-family-other;
+  text-align: center;
+  color: #ffffff;
+
+  background-image: url("../img/svg/icon-gift.svg"),
+    linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("../img/more-bonus-mobile.png");
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-position: top 59px center, top, top;
+  background-size: 78px 80px, auto, cover;
+
+  @media (min-width: $tablet-width) {
+    padding: 56px 110px 52px 60%;
+
+    text-align: left;
+
+    background-image: url("../img/svg/icon-gift.svg"),
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/more-bonus-tablet.jpg");
+    background-position: center left 80px, top, center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    padding: 172px 20px 26px;
+
+    text-align: center;
+
+    background-position: top 59px center, top, top;
+  }
+}

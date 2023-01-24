@@ -1,0 +1,174 @@
+//
+.card__container {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  padding: 20px 0 25px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    padding: 0 38px 40px;
+
+    background-color: #f2f2f2;
+  }
+}
+
+.card__link-img {
+  width: 140px;
+  height: 112px;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    height: 200px;
+    margin: -70px auto 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -80px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.card__link-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card__wrapper {
+  margin-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 18px;
+    padding-top: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 43px;
+  }
+}
+
+.card__link-title {
+  max-width: 80px;
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #222222;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    max-width: 155px;
+    margin: 0 auto;
+
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 21px;
+  }
+}
+
+.card__link {
+  color: $color-dark-grey-2;
+  text-decoration: none;
+}
+
+.card__list-description {
+  margin-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 16px;
+  }
+}
+
+.card__button {
+  grid-column: 1/-1;
+  width: 100%;
+}
+
+.card--more .card__container {
+  display: block;
+  padding: 80px 0 26px;
+
+  text-align: center;
+
+  background-image: url("../img/svg/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: top 25px center;
+
+  @media (min-width: $tablet-width) {
+    padding: 160px 35px 37px;
+
+    background-color: transparent;
+    background-position: top 53px center;
+    background-size: 60px 60px;
+    border: 2px solid #f2f2f2;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: top 50px center;
+  }
+}
+
+.card--more .card__link-title {
+  max-width: 100%;
+  margin-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 155px;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+  }
+}
+
+.card--more .card__text {
+  margin: 0 0 20px;
+
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $font-family-other;
+  color: #444444;
+
+  @media (min-width: $tablet-width) {
+    max-width: 170px;
+    margin: 0 auto 85px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.card--more .card__button {
+  color: #444444;
+
+  background-color: #f2f2f2;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+
+    background-color: #ebebeb;
+  }
+}

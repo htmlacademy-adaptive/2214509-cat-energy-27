@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" sizes="32x32" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/lato-regular.woff2" as="font" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <title>HTML Academy: Кэт энерджи</title>
+</head>
+
+<body class="page-form">
+  <header class="header">
+    <div class="header__container container">
+      <nav class="header__menu menu">
+        <a class="header__logo logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/svg/icon-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/icon-logo-tablet.svg">
+            <img src="img/svg/icon-logo-mobile.svg" width="191" height="38" alt="Логотип «Кэт Энерджи».">
+          </picture>
+        </a>
+
+        <button class="menu__btn" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+
+        <ul class="menu__content-list">
+          <li class="menu__content-item">
+            <a class="menu__content-link" href="index.html">Главная</a>
+          </li>
+          <li class="menu__content-item">
+            <a class="menu__content-link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="menu__content-item">
+            <a class="menu__content-link menu__content-link--current">Подбор программы</a>
+          </li>
+        </ul>
+
+      </nav>
+
+      <section class="promo promo--page promo--form">
+        <div class="promo__background-wrapper">
+          <h1 class="promo__title">Подбор программы</h1>
+          <p class="promo__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <section class="form">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="form__container">
+          <fieldset class="form__fieldset form__fieldset--data">
+            <h2 class="visually-hidden">Данные питомца</h2>
+            <div class="form__group">
+              <div class="form__group-item">
+                <label class="form__label" for="form-name">Имя:<sup>*</sup></label>
+                <input class="form__input" type="text" id="form-name" placeholder="Барсик">
+              </div>
+              <div class="form__group-item">
+                <label class="form__label" for="form-weight">Вес (кг):<sup>*</sup></label>
+                <input class="form__input" type="number" id="form-weight" placeholder="7">
+              </div>
+              <div class="form__group-item">
+                <label class="form__label" for="form-ago">Возраст (лет):</label>
+                <input class="form__input" type="number" id="form-ago" placeholder="7">
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--radio">
+            <h2 class="visually-hidden">Цель питания</h2>
+            <div class="form__group">
+              <label class="form__label form__group-item" for="slimming">
+                <input class="form__input-item form__input-item--radio" type="radio" name="group-weight" value="Похудение" id="slimming" checked>
+                <span class="form__label-text">Похудение</span>
+              </label>
+              <label class="form__label form__group-item" for="gaining-mass">
+                <input class="form__input-item form__input-item--radio" type="radio" name="group-weight" value="Набор массы" id="gaining-mass">
+                <span class="form__label-text">Набор массы</span>
+              </label>
+              <label class="form__label form__group-item" for="need-advice">
+                <input class="form__input-item form__input-item--radio" type="radio" name="group-weight" value="Не знаю (нужен ваш совет)" id="need-advice">
+                <span class="form__label-text">Не знаю (нужен ваш совет)</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+        <fieldset class="form__fieldset form__fieldset--contacts">
+          <h2 class="form__legend form__legend--lines">
+            <span>Контактные данные (владельца кота)</span>
+          </h2>
+          <div class="form__group">
+            <div class="form__group-item">
+              <label class="form__label" for="form-mail">E-mail:<sup>*</sup></label>
+              <div class="form__input-container form__input-container--mail">
+                <input class="form__input form__input--mail" type="email" id="form-mail" placeholder="кuklachev@gmail.com">
+              </div>
+            </div>
+            <div class="form__group-item form__group-item--phone">
+              <label class="form__label" for="form-phone">Телефон:<sup>*</sup></label>
+              <div class="form__input-container form__input-container--phone">
+                <input class="form__input" type="number" id="form-phone" placeholder="8 (960) 900-60-90">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--commit">
+          <h2 class="form__legend form__legend--lines">
+            <span>Комментарий</span>
+          </h2>
+          <textarea class="form__input" name="commit" id="commit" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--check">
+          <h2 class="form__legend form__legend--lines">
+            <span>Дополнительно</span>
+          </h2>
+          <div class="form__group">
+            <label class="form__label form__group-item" for="sweetener">
+              <input class="form__input-item form__input-item--check" type="checkbox" name="sweetener" value="Сахарозаменитель" id="sweetener" checked>
+              <span class="form__label-text">Сахарозаменитель</span>
+            </label>
+            <label class="form__label form__group-item" for="water">
+              <input class="form__input-item form__input-item--check" type="checkbox" name="water" value="Питьевая вода" id="water">
+              <span class="form__label-text">Питьевая вода</span>
+            </label>
+            <label class="form__label form__group-item" for="milk">
+              <input class="form__input-item form__input-item--check" type="checkbox" name="milk" value="Молоко" id="milk">
+              <span class="form__label-text">Молоко</span>
+            </label>
+            <label class="form__label form__group-item" for="vitamins">
+              <input class="form__input-item form__input-item--check" type="checkbox" name="vitamins" value="Витамины" id="vitamins">
+              <span class="form__label-text">Витамины</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__fieldset form__fieldset--submit">
+          <button class="button form__submit" type="submit">Отправить заявку</button>
+          <p><sup>*</sup>— Обязательные поля</p>
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+  <footer class="footer footer--home">
+    <section class="address">
+      <div class="container">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="address__wrapper">
+          <p class="address__title">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <a class="address__link" href="https://goo.gl/maps/MYYqY5xRLSDUEHzb8">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></a>
+        </div>
+      </div>
+      <div class="address__map">
+        <noscript>
+          <a class="address__map-img" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" type="image/webp" srcset="img/map.webp 1x, img/map@2x.webp 2x">
+              <source media="(min-width: 1200px)" type="image/jpeg" srcset="img/map.jpg 1x, img/map@2x.jpg 2x">
+
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)" type="image/jpeg" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+
+              <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+              <img src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта" width="320" height="362">
+            </picture>
+          </a>
+        </noscript>
+        <div class="address__map-iframe">
+          <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.58095197757!2d30.319410323390894!3d59.93909537160517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1603140540112!5m2!1sru!2sru" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+        </div>
+      </div>
+    </section>
+    <section class="footer__container container">
+      <h2 class="visually-hidden">Социальные сети</h2>
+      <div class="footer__logo">
+        <a class="footer__link" href="index.html">
+          <svg width="128" height="24" focusable="false">
+            <use xlink:href="img/sprite.svg#logo-footer"></use>
+          </svg>
+          <span class="visually-hidden">Переход на главную страницу</span>
+        </a>
+      </div>
+      <div class="footer__socials socials">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vk" href="#">
+              <svg width="28" height="22" role="img" aria-label="Контакт">
+                <use href="img/sprite.svg#icon-vkontakte"></use>
+              </svg>
+              <span class="visually-hidden">Мы в Вконтакте</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="https://www.youtube.com/user/htmlacademyru">
+              <svg width="28" height="22" role="img" aria-label="Youtube">
+                <use href="img/sprite.svg#icon-youtube"></use>
+              </svg>
+              <span class="visually-hidden">Мы в YouTube</span>
+            </a>
+          </li>
+          <li class="socials__item ">
+            <a class="socials__link" href="https://t.me/htmlacademy">
+              <svg width="28" height="22" role="img" aria-label="Телеграм">
+                <use href="img/sprite.svg#icon-telegram"></use>
+              </svg>
+              <span class="visually-hidden">Мы в Телеграме</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__logo-academy logo-academy">
+        <a class="logo-academy__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+          <svg width="27" height="34" role="img" aria-label="HTML Academy">
+            <use href="img/sprite.svg#icon-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+//
+.logo-academy__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $font-family-other;
+  color: #444444;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.logo-academy__link svg {
+  width: 27px;
+  height: 34px;
+
+  fill: #666666;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 27px;
+  }
+}
+
+.logo-academy__link:hover svg,
+.logo-academy__link:focus svg {
+  fill: #68b738;
+}

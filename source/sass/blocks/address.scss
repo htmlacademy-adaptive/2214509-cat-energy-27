@@ -1,0 +1,114 @@
+//
+.address {
+  position: relative;
+}
+
+.address--home .address {
+  background-color: #ffffff;
+}
+
+.address .container {
+  padding: 0;
+}
+
+.address__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 26px 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 10px 250px;
+    padding: 58px 71px 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 94px;
+    left: 0;
+    z-index: 10;
+
+    gap: 10px 91px;
+    width: 565px;
+    padding: 59px 80px 61px;
+
+    background-color: #ffffff;
+  }
+}
+
+.address__title {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.address__link {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $font-family-other;
+  color: #444444;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.address__link span {
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+
+.address__map {
+  width: 100%;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
+.address__map img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.address__map-img,
+.address__map-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.address__map-iframe {
+  height: 100%;
+}
+
+.no-js .address__map-iframe {
+  display: none;
+}
+
+.address__map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  border: none;
+}

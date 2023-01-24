@@ -1,0 +1,84 @@
+//
+.card-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 14px 0 18px;
+
+  border-top: 1px solid #cdcdcd;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 150px 70px;
+    gap: 18px 23px;
+    padding: 26px 37px 28px;
+
+    border: 1px solid #cdcdcd;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 220px 60px 244px;
+    align-items: baseline;
+    padding: 17px 0 14px;
+
+    border: none;
+    border-top: 1px solid #cdcdcd;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.card-add__title {
+  width: 100%;
+  margin: 0 0 12px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.card-add p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $font-family-other;
+  color: #444444;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.card-add__btn {
+  width: 100%;
+  margin-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: auto;
+  }
+}

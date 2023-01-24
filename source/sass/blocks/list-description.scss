@@ -1,0 +1,32 @@
+//
+
+.list-description__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $font-family-other;
+  color: $color-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.list-description__wrapper dt,
+.list-description__wrapper dd {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 0 7px;
+  }
+}
+
+.list-description__value {
+  text-align: right;
+}
