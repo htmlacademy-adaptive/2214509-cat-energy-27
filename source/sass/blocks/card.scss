@@ -1,232 +1,174 @@
-.card {
-  position: relative;
-  width: 100%;
-}
-
-.card::after {
-  position: absolute;
-  content: " ";
-  height: 1px;
-  bottom: 0;
-  left: -20px;
-  right: -20px;
-  background-color: $color-border-catalog;
-  z-index: -1;
-}
-
+//
 .card__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 7px;
-  margin-bottom: 10px;
-  padding-top: 14px;
-}
+  grid-template-columns: 140px 1fr;
+  padding: 20px 0 25px;
 
-.card__list-description {
-  margin: 0;
-  padding: 0;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 133%;
-  color: $color-dark-grey;
-}
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    padding: 0 38px 40px;
 
-.card__link {
-  display: inline-block;
-  margin: 0;
-  margin-bottom: 14px;
-  padding: 0;
-  padding-right: 66px;
-  text-decoration: none;
-  color: $color-dark-grey-2;
-}
-
-.card__link-title {
-  margin: 0;
-  padding: 0;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $color-dark-grey-2;
+    background-color: #f2f2f2;
+  }
 }
 
 .card__link-img {
-  padding: 0 28px;
-}
+  width: 140px;
+  height: 112px;
 
-.card__img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 112px;
-  padding-top: 9px;
-}
-
-.card__img-container--small {
-  align-items: top;
-  padding-top: 0;
-}
-
-.card__img--fish-500 {
-  margin-top: 18px;
-}
-
-.card__img--buckwheat-500 {
-  margin-top: 24px;
-}
-
-.card__img--rice-500 {
-  margin-top: 20px;
-}
-
-.card__button-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: $tablet-width) {
-  .card {
-    width: 100%;
-    padding: 0 36px 39px;
-    margin: 0;
-    background-color: $color-white;
-    background-image: linear-gradient(to bottom, $color-white $height-tablet-card-bg, $color-grey $height-tablet-card-bg 100%);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: top center;
-  }
-
-  .card::after {
-    display: none;
-  }
-
-  .card__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 252px;
-    margin: 0;
-  }
-
-  .card__wrapper {
-    margin-bottom: 33px;
-  }
-
-  .card__link {
-    min-width: 174px;
-    padding: 0 20px;
-    margin-bottom: 13px;
-  }
-
-  .card__img-container {
-    display: flex;
-    align-items: flex-end;
-    text-align: center;
+  @media (min-width: $tablet-width) {
     width: 168px;
     height: 200px;
-    margin: 0 42px 28px;
+    margin: -70px auto 0;
   }
 
-  .card__link-img {
-    padding: 0;
+  @media (min-width: $desktop-width) {
+    margin-top: -80px;
   }
 
-  .card__img {
-    position: relative;
-    bottom: 0;
+  &:hover,
+  &:focus {
+    opacity: 0.8;
   }
 
-  .card__img--chicken-500 {
-    width: 161px;
-    height: 172px;
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.card__link-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card__wrapper {
+  margin-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 18px;
+    padding-top: 32px;
   }
 
-  .card__img--chicken-1000 {
-    width: 168px;
-    height: 200px;
+  @media (min-width: $desktop-width) {
+    padding-top: 43px;
   }
+}
 
-  .card__img--fish-500 {
-    width: 163px;
-    height: 174px;
-  }
+.card__link-title {
+  max-width: 80px;
+  margin: 0;
 
-  .card__img--fish-1000 {
-    width: 168px;
-    height: 200px;
-  }
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #222222;
+  text-transform: uppercase;
 
-  .card__img--buckwheat-500 {
-    width: 161px;
-    height: 171px;
-  }
+  @media (min-width: $tablet-width) {
+    max-width: 155px;
+    margin: 0 auto;
 
-  .card__img--buckwheat-1000 {
-    width: 168px;
-    height: 200px;
-  }
-
-  .card__img--rice-500 {
-    width: 163px;
-    height: 174px;
-  }
-
-  .card__link-title {
-    min-height: 48px;
-    text-align: center;
     font-size: 20px;
-    line-height: 120%;
-    padding: 0 39px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 21px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .card {
-    max-width: 245px;
-    padding: 0 35px 40px 38px;
+.card__link {
+  color: $color-dark-grey-2;
+  text-decoration: none;
+}
+
+.card__list-description {
+  margin-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 12px;
   }
 
-  .card__container {
-    min-width: 0;
-    margin: 0;
-    padding-top: 9px;
+  @media (min-width: $desktop-width) {
+    margin-top: 16px;
+  }
+}
+
+.card__button {
+  grid-column: 1/-1;
+  width: 100%;
+}
+
+.card--more .card__container {
+  display: block;
+  padding: 80px 0 26px;
+
+  text-align: center;
+
+  background-image: url("../img/svg/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: top 25px center;
+
+  @media (min-width: $tablet-width) {
+    padding: 160px 35px 37px;
+
+    background-color: transparent;
+    background-position: top 53px center;
+    background-size: 60px 60px;
+    border: 2px solid #f2f2f2;
   }
 
-  .card__img-container {
-    width: 172px;
-    height: 196px;
-    margin: 0 4px 36px;
+  @media (min-width: $desktop-width) {
+    background-position: top 50px center;
+  }
+}
+
+.card--more .card__link-title {
+  max-width: 100%;
+  margin-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 155px;
+    margin-bottom: 21px;
   }
 
-  .card__img--chicken-1000 {
-    width: 172px;
-    height: 201.94px;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+  }
+}
+
+.card--more .card__text {
+  margin: 0 0 20px;
+
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $font-family-other;
+  color: #444444;
+
+  @media (min-width: $tablet-width) {
+    max-width: 170px;
+    margin: 0 auto 85px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.card--more .card__button {
+  color: #444444;
+
+  background-color: #f2f2f2;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
   }
 
-  .card__img--fish-1000 {
-    width: 172px;
-    height: 196px;
-  }
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
 
-  .card__img--buckwheat-1000 {
-    width: 172px;
-    height: 196px;
-  }
-
-  .card__wrapper {
-    margin: 0 30px 31px 30px;
-  }
-
-  .card__link {
-    padding: 0;
-    margin-bottom: 14px;
-  }
-
-  .card__link-title {
-    line-height: 105%;
-    padding: 0 15px;
+    background-color: #ebebeb;
   }
 }

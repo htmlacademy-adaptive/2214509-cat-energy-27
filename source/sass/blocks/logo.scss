@@ -1,50 +1,35 @@
-.logo-mobile {
-  display: inline-block;
-  margin: 0;
-  margin-right: 50px;
-  padding: 0;
-}
-
-.logo-mobile__icon-mobile {
-  position: relative;
-}
-
-.logo-mobile__icon-label {
-  position: absolute;
-  left: calc(50vw - 50px);
-  top: 24px;
-}
-
+//
 .logo {
-  display: none;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 191px;
+  height: 38px;
+  margin-left: 19px;
 
-@media (min-width: $tablet-width) {
-  .logo-mobile {
-    display: none;
-  }
-
-  .logo {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 94px;
-    cursor: pointer;
+  @media (min-width: 768px) {
+    width: 174px;
     height: 52px;
-
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &:focus-within {
-      opacity: 0.6;
-    }
+    margin-left: 0;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .logo {
-    margin-right: 408px;
+  @media (min-width: 1440px) {
     width: 202px;
     height: 59px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }

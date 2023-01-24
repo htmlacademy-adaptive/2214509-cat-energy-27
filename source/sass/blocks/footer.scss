@@ -1,82 +1,99 @@
-.footer {
-  width: 100%;
-  min-height: 34px;
-  padding: 0;
-  background-color: $color-basic-grey;
-}
+//
 
-.footer__socials {
-  text-align: center;
-  padding: 18px 62px;
-  border-top: 1px solid $color-border-grey;
-  border-bottom: 1px solid $color-border-grey;
-  margin: 0 auto;
+.footer__container {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 140px 1fr;
+    align-items: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
 }
 
 .footer__logo {
-  display: flex;
-  justify-content: center;
-  padding: 39px 0 27px;
+  padding: 40px 0 19px;
+
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    text-align: left;
+  }
+
+  &:hover,
+  &:focus {
+    color: #3e3e3e;
+  }
+
+  &:active {
+    color: #6b6b6b;
+  }
 }
 
-.footer__logo-academy {
-  padding: 20px 0 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+.footer__logo svg {
+  width: 100%;
+  height: 100%;
 
-.logo-academy__link-academy {
-  font-size: 16px;
-  line-height: 112%;
+  fill: currentColor;
 }
 
 .footer__link {
-  display: inline-block;
+  display: block;
+  width: 128px;
+  height: 24px;
+  margin: 0 auto;
+
+  color: #111111;
+
+  @media (min-width: $tablet-width) {
+    width: 143px;
+    height: 26px;
+    margin: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: #3e3e3e;
+  }
+
+  &:active {
+    color: #6b6b6b;
+  }
 }
 
-@media (min-width: $tablet-width) {
-  .footer {
-    width: 100%;
-    padding: 56px 0;
-  }
+.footer__logo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 
-  .footer-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  fill: currentColor;
+}
 
-  .footer__logo {
+.footer__socials {
+  padding-top: 20px;
+  padding-bottom: 19px;
+
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
     padding: 0;
-  }
 
-  .footer__link:hover {
-    opacity: 0.8;
-  }
-
-  .footer__link:focus {
-    opacity: 0.6;
-  }
-
-  .footer__socials {
     border: none;
-    padding: 0;
-  }
-
-  .footer__logo-academy {
-    padding: 0;
-    display: flex;
-    align-items: center;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .footer {
-    width: auto;
-  }
+.footer__logo-academy {
+  padding-top: 22px;
+  padding-bottom: 23px;
 
-  .footer-wrapper {
-    max-width: 1440px;
+  @media (min-width: $tablet-width) {
+    padding: 0;
   }
 }

@@ -1,75 +1,31 @@
+//
 .header {
-  width: auto;
-  padding: 10px 0 0;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 100%;
-  background-color: $color-white;
-}
-
-.header-wrapper {
-  margin: 0 auto;
-}
-
-.header__logo-wrapper {
-  padding: 0 20px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid $color-border-advantages;
-}
-
-.header__menu {
-  display: block;
-}
-
-@media (min-width: $tablet-width) {
-  .header {
-    width: auto;
-    padding: 24px 30px 64px;
-  }
-
-  .header-wrapper {
-    display: grid;
-    grid-template-columns: auto minmax(auto, 1166px);
-    justify-content: center;
-    align-items: center;
-  }
-
-  .header__logo-wrapper {
-    border-bottom: none;
-    padding: 0;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .header {
+  @media (min-width: $desktop-width) {
     position: relative;
-    top: 0;
-    width: 100%;
-    margin: 0;
-    margin-bottom: 10px;
-    padding: 54px 0 64px;
-    background-color: transparent;
-    z-index: 2;
   }
+}
 
-  .header--bg {
+.header--index::after {
+  @media (min-width: $desktop-width) {
+    content: "";
     position: absolute;
-  }
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
 
-  .header-wrapper {
-    display: grid;
-    grid-template-columns: auto 610px;
-    justify-content: center;
-    align-items: center;
+    background-image: linear-gradient(
+        rgba(104, 183, 56, 0.85),
+        rgba(104, 183, 56, 0.85)
+      ),
+      url("../img/promo-bg-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
   }
+}
 
-  .header__logo-wrapper {
-    grid-column: 1 / 2;
-  }
-
-  .header__menu {
-    grid-column: 2 / 3;
-  }
+.header__container {
+  padding: 0;
 }

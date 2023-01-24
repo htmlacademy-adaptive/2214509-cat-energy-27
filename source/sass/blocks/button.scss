@@ -1,51 +1,30 @@
+//
 .button {
-  display: inline-block;
-  margin: 0;
-  padding: 10px 109px;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
+  display: block;
+  width: 168px;
+  margin: 0 auto;
+  padding: 10px;
+
   font-size: 16px;
-  line-height: 125%;
-  border: none;
-  text-transform: uppercase;
+  line-height: 20px;
+  font-family: $font-family-main;
   text-align: center;
-  color: $color-white;
-  background-color: $color-basic-green;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $basic-green;
+  border: none;
   cursor: pointer;
-}
 
-.button--secondary {
-  background-color: $color-basic-grey;
-  color: $color-dark-grey;
-  padding: 10px 74px;
-}
-
-@media (min-width: $tablet-width) {
-  .button:hover {
-    background-color: $color-green-hover;
+  &:hover,
+  &:focus {
+    background-color: $basic-green-2;
   }
 
-  .button:focus {
-    color: transparentize($color-white, 0.3);
-  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
 
-  .button--secondary:hover {
-    background-color: $color-border-catalog;
-  }
-
-  .button--secondary:focus {
-    color: $color-black;
-    opacity: 0.3;
-  }
-
-  .button--card {
-    padding: 10px 93px;
-    margin: 0 2px;
-  }
-
-  @media (min-width: $desktop-width) {
-    .button--card {
-      padding: 10px 53px;
-    }
+    background-color: $basic-green-2;
   }
 }

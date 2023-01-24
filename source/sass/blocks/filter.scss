@@ -7,45 +7,51 @@
   flex-direction: column;
   flex-wrap: wrap;
   padding-bottom: 10px;
+
   border: none;
 }
 
 .filter__about-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   width: 100%;
   margin: 0 0 13px;
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
 }
 
 .filter__about-label {
   max-width: 50%;
-  white-space: nowrap;
   margin: 0;
-  padding: 0;
   margin-right: 15px;
+  padding: 0;
+
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .filter__about-field {
   width: 100%;
   padding: 14px 15px;
+
   border: 1px solid $color-border-form;
+
   appearance: none;
 }
 
 .filter__about-field::placeholder {
-  font-family: "Oswald", "Arial", sans-serif;
+  margin: 0 20px;
+
   font-size: 16px;
   line-height: 112%;
-  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
   color: $color-dark-grey;
-  margin: 0 20px;
+  text-transform: uppercase;
 }
 
 .filter__radio {
   padding-top: 24px;
   padding-bottom: 5px;
+
   border: none;
 }
 
@@ -53,12 +59,14 @@
   margin: 0;
   padding: 0;
   padding-left: 45px;
+
   text-transform: uppercase;
 }
 
 .filter__radio-list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -71,6 +79,7 @@
   margin: 0;
   margin-top: 26px;
   padding: 0 0 12px;
+
   border: none;
 }
 
@@ -79,13 +88,15 @@
 }
 
 .filter__decoration::before {
+  content: " ";
   position: absolute;
   top: 50%;
-  content: " ";
+  z-index: -1;
+
   width: 100%;
   height: 2px;
+
   background-color: $color-basic-green;
-  z-index: -1;
 }
 
 .filter__decoration--contacts::before {
@@ -102,10 +113,12 @@
   display: inline-block;
   margin: 0;
   padding: 0 20px;
+
   font-weight: 400;
   font-size: 24px;
   line-height: 108%;
   color: $color-black;
+
   background-color: $color-white;
 }
 
@@ -122,29 +135,33 @@
 
 .filter__contacts-label {
   max-width: 50%;
-  white-space: nowrap;
   margin: 0;
   padding: 0;
   padding-right: 11px;
+
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .filter__contacts-field {
   position: relative;
+
   width: 100%;
   margin: 0;
   padding: 15px;
   padding-right: 40px;
+
   border: 1px solid $color-border-form;
+
   appearance: none;
 }
 
 .filter__contacts-field::placeholder {
-  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 112%;
-  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
   color: $color-dark-grey;
+  text-transform: uppercase;
 }
 
 .filter__contacts-icon {
@@ -157,6 +174,7 @@
   margin: 0;
   padding: 0;
   padding-bottom: 24px;
+
   border: none;
 }
 
@@ -164,10 +182,12 @@
   display: inline-block;
   margin: 0;
   padding: 0 23px 0 20px;
+
   font-weight: 400;
   font-size: 24px;
   line-height: 108%;
   color: $color-black;
+
   background-color: $color-white;
 }
 
@@ -178,22 +198,25 @@
 
 .filter__comment-field {
   width: 100%;
+  min-height: 150px;
   margin: 0;
   margin-top: 37px;
   padding: 8px 10px;
-  min-height: 150px;
+
   border: 1px solid $color-border-form;
+
   appearance: none;
 }
 
 .filter__comment-field::placeholder {
-  font-family: "Oswald", "Arial", sans-serif;
+  padding: 0;
+
   font-size: 16px;
   line-height: 112%;
-  text-transform: uppercase;
-  color: $color-dark-grey;
-  padding: 0;
+  font-family: "Oswald", "Arial", sans-serif;
   text-align: center;
+  color: $color-dark-grey;
+  text-transform: uppercase;
 }
 
 .filter__checkbox {
@@ -201,6 +224,7 @@
   margin: 0;
   padding: 0;
   padding-bottom: 19px;
+
   border: none;
 }
 
@@ -208,16 +232,19 @@
   display: inline-block;
   margin: 0;
   padding: 0 23px 0 20px;
+
   font-weight: 400;
   font-size: 24px;
   line-height: 108%;
   color: $color-black;
+
   background-color: $color-white;
 }
 
 .filter__checkbox-list {
-  list-style: none;
   margin-top: 32px;
+
+  list-style: none;
 }
 
 .filter__checkbox-item {
@@ -228,6 +255,7 @@
   margin: 0;
   padding: 0;
   padding-left: 45px;
+
   line-height: 30px;
   text-transform: uppercase;
 }
@@ -250,8 +278,8 @@
 @media (min-width: $tablet-width) {
   .filter__about {
     width: 100%;
-    padding: 0 37px 0 30px;
     margin-bottom: 52px;
+    padding: 0 37px 0 30px;
   }
 
   .filter__about-wrapper {
@@ -260,13 +288,15 @@
   }
 
   .filter__about-label {
+    margin-right: 18px;
+
     font-size: 20px;
     line-height: 150%;
-    margin-right: 18px;
   }
 
   .filter__about-field {
     padding: 11px 10px 10px 18px;
+
     font-size: 20px;
     line-height: 150%;
   }
@@ -284,9 +314,10 @@
   }
 
   .filter__about-field::placeholder {
+    padding: 10px 0;
+
     font-size: 20px;
     line-height: 150%;
-    padding: 10px 0;
   }
 
   .filter__border {
@@ -295,26 +326,28 @@
 
   .filter__radio {
     width: 100%;
-    padding: 0 37px 0 41px;
     margin-bottom: 74px;
+    padding: 0 37px 0 41px;
   }
 
   .filter__radio-list {
     margin: 0 30px;
     padding: 25px;
     padding-bottom: 10px;
+
     border: 1px solid $color-border-form;
   }
 
   .filter__radio-item {
-    padding: 5px 0;
     margin-bottom: 13px;
+    padding: 5px 0;
   }
 
   .filter__radio-label {
+    padding-left: 62px;
+
     font-size: 20px;
     line-height: 150%;
-    padding-left: 62px;
   }
 
   .filter__contacts {
@@ -335,14 +368,11 @@
   .filter__contacts-subtitle {
     display: inline-block;
     max-width: 100%;
+    margin-bottom: 10px;
+    padding: 0 39px;
+
     font-size: 36px;
     line-height: 100%;
-    padding: 0 39px;
-    margin-bottom: 10px;
-  }
-
-  br {
-    display: none;
   }
 
   .filter__contacts-container {
@@ -350,14 +380,15 @@
   }
 
   .filter__contacts-wrapper {
-    padding: 0 35px 0 39px;
     margin-bottom: 20px;
+    padding: 0 35px 0 39px;
   }
 
   .filter__contacts-label {
+    padding: 0 18px 0 0;
+
     font-size: 20px;
     line-height: 100%;
-    padding: 0 18px 0 0;
   }
 
   .filter__contacts-label--email {
@@ -371,6 +402,7 @@
   .filter__contacts-field {
     padding: 10px 21px;
     padding-right: 60px;
+
     font-size: 20px;
     line-height: 150%;
   }
@@ -400,7 +432,6 @@
     stroke: $color-error;
   }
 
-
   .filter__contacts-field::placeholder {
     font-size: 20px;
     line-height: 100%;
@@ -413,10 +444,11 @@
   }
 
   .filter__comment-subtitle {
-    font-size: 36px;
-    line-height: 100%;
     margin-bottom: 8px;
     padding: 0 40px;
+
+    font-size: 36px;
+    line-height: 100%;
   }
 
   .filter__comment .container {
@@ -424,16 +456,17 @@
   }
 
   .filter__comment-field {
+    min-height: 174px;
     margin-top: 68px;
     padding: 10px 19px;
-    min-height: 174px;
   }
 
   .filter__comment-field::placeholder {
+    padding: 0;
+
     font-size: 20px;
     line-height: 150%;
     text-align: left;
-    padding: 0;
   }
 
   .filter__checkbox {
@@ -442,16 +475,17 @@
   }
 
   .filter__checkbox-subtitle {
+    margin-bottom: 8px;
     padding: 0 40px;
+
     font-size: 36px;
     line-height: 100%;
-    margin-bottom: 8px;
   }
 
   .filter__checkbox-list {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
+    align-items: center;
     margin-top: 49px;
     margin-bottom: 24px;
     padding: 0 11px 0 70px;
@@ -459,15 +493,16 @@
 
   .filter__checkbox-item {
     width: 50%;
-    padding: 0;
     margin-bottom: 34px;
+    padding: 0;
   }
 
   .filter__checkbox-label {
+    padding-top: 7px;
+    padding-left: 59px;
+
     font-size: 20px;
     line-height: 150%;
-    padding-left: 59px;
-    padding-top: 7px;
   }
 
   .filter__button-wrapper {
@@ -476,19 +511,21 @@
   }
 
   .filter__button {
-    font-size: 20px;
-    line-height: 100%;
-    padding: 16px 65px;
-    margin-left: 40px;
     margin-right: 61px;
     margin-bottom: 0;
+    margin-left: 40px;
+    padding: 16px 65px;
+
+    font-size: 20px;
+    line-height: 100%;
   }
 
   .form__meta {
     display: inline-block;
-    vertical-align: middle;
+
     font-size: 16px;
     line-height: 100%;
+    vertical-align: middle;
   }
 }
 
@@ -496,11 +533,12 @@
   .filter__flex-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
+    max-width: $desktop-width;
     margin: 0 auto;
     margin-bottom: 50px;
-    max-width: $desktop-width;
     padding: 0 110px;
+
+    column-gap: 80px;
   }
 
   .filter__border {
@@ -508,16 +546,15 @@
   }
 
   .filter__about {
-    min-width: calc(50% - 110px);
-    padding: 0;
-    margin: 0;
     grid-column: 1 / 2;
+    min-width: calc(50% - 110px);
+    margin: 0;
+    padding: 0;
   }
 
   .filter__about-wrapper {
     padding: 0;
   }
-
 
   .filter__about-field {
     font-size: 20px;
@@ -525,10 +562,10 @@
   }
 
   .filter__radio {
-    min-width: calc(50% - 110px);
-    padding: 0;
-    margin: 0;
     grid-column: 2 / 3;
+    min-width: calc(50% - 110px);
+    margin: 0;
+    padding: 0;
   }
 
   .filter__radio-list {
@@ -536,8 +573,8 @@
   }
 
   .filter__decoration-container {
-    margin: 0 auto;
     max-width: $desktop-width;
+    margin: 0 auto;
     padding: 0 110px;
   }
 
@@ -549,9 +586,9 @@
 
   .filter__contacts-container {
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
     max-width: $desktop-width;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .filter__contacts-wrapper {
@@ -564,8 +601,8 @@
   }
 
   .filter__contacts-subtitle {
-    padding: 0 40px;
     margin-left: -40px;
+    padding: 0 40px;
   }
 
   .filter__contacts-field {
@@ -588,19 +625,19 @@
 
   .filter__comment {
     width: 100%;
-    padding: 0;
     margin-bottom: 64px;
+    padding: 0;
   }
 
   .filter__comment-subtitle {
-    padding: 0 40px;
     margin-left: -40px;
+    padding: 0 40px;
   }
 
   .filter__comment .container {
-    padding: 0 110px;
-    margin: 0 auto;
     max-width: $desktop-width;
+    margin: 0 auto;
+    padding: 0 110px;
   }
 
   .filter__checkbox {
@@ -613,11 +650,11 @@
   }
 
   .filter__checkbox-list {
-    padding: 0 110px;
-    margin-left: auto;
-    margin-right: auto;
     max-width: $desktop-width;
+    margin-right: auto;
     margin-bottom: 31px;
+    margin-left: auto;
+    padding: 0 110px;
   }
 
   .filter__checkbox-item {
@@ -630,13 +667,13 @@
   }
 
   .filter__button-wrapper {
-    margin: 0 auto;
     max-width: $desktop-width;
+    margin: 0 auto;
   }
 
   .filter__button {
-    padding: 16px 208px;
     margin-right: 81px;
     margin-left: 0;
+    padding: 16px 208px;
   }
 }

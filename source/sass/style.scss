@@ -4,8 +4,9 @@
 @import "common/global.scss";
 @import "common/container.scss";
 
-// visually-hidden
+// utils
 @import "blocks/visually-hidden.scss";
+@import "blocks/button.scss";
 
 // index
 @import "blocks/header.scss";
@@ -27,7 +28,6 @@
 @import "blocks/catalog.scss";
 @import "blocks/card.scss";
 @import "blocks/list-description.scss";
-@import "blocks/button.scss";
 @import "blocks/pagination.scss";
 @import "blocks/catalog-add.scss";
 @import "blocks/card-add.scss";

@@ -1,21 +1,40 @@
-.logo-htacademy__link-academy {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
+//
+.logo-academy__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $font-family-other;
+  color: #444444;
   text-decoration: none;
-  color: $color-dark-grey;
-}
 
-@media (min-width: $tablet-width) {
-  .logo-academy__link-academy--icon {
-    padding-left: 22px;
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
   }
 
-  .footer__logo-academy:hover .logo-academy__icon {
-    stroke: $color-basic-green;
+  &:focus {
+    outline: none;
   }
 
-  .footer__logo-academy:focus {
+  &:active {
     opacity: 0.3;
   }
+}
+
+.logo-academy__link svg {
+  width: 27px;
+  height: 34px;
+
+  fill: #666666;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 27px;
+  }
+}
+
+.logo-academy__link:hover svg,
+.logo-academy__link:focus svg {
+  fill: #68b738;
 }
