@@ -256,7 +256,7 @@
     }
   }
 
-  &:before {
+  &::before {
     display: none;
     margin-left: -100%;
 
@@ -265,7 +265,7 @@
     }
   }
 
-  &:after {
+  &::after {
     margin-right: -100%;
   }
 }
