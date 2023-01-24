@@ -1,14 +1,14 @@
-let navMenu = document.querySelector('.menu__popover');
-let navToggle = document.querySelector('.menu__toggle');
 
-navMenu.classList.remove('menu__popover--nojs');
+const menuBtn = document.querySelector('.menu__btn');
+const menuNav = document.querySelector('.menu');
 
-navToggle.addEventListener('click', function () {
-  if (navMenu.classList.contains('menu__popover--closed')) {
-    navMenu.classList.remove('menu__popover--closed');
-    navMenu.classList.add('menu__popover--opened');
-  } else {
-    navMenu.classList.add('menu__popover--closed');
-    navMenu.classList.remove('menu__popover--opened');
-  }
-});
+if (document.querySelector('.no-js')) {
+  document.querySelector('.no-js').classList.remove('no-js');
+}
+
+if (menuBtn) {
+  menuBtn.addEventListener('click', function (evt) {
+    evt.preventDefault;
+    menuNav.classList.toggle('menu--open');
+  });
+}
